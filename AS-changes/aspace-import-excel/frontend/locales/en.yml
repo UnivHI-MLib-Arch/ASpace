@@ -1,0 +1,71 @@
+en:
+  plugins:
+    aspace-import-excel:
+      import: Import from SpreadSheet
+      add_file: Select File
+      drag_drop: Drag and drop file here
+      clip_btn: Copy to Clipboard
+      add_archival_objects: Import Archival Objects
+      add_digital_objects: Add Digital Objects to Archival Objects
+      row: "Row %{row}"
+      processing_row: "Processing row %{row}"
+      row_error: "Row %{row} will not be processed due to errors: %{errs}"
+      no_ao: No Archival Object created
+      created: "%{what} created: %{id}"
+      updated: "%{what}: %{id}"
+      clip_created:  "\t%{what} created: \t%{nm}\t%{id}\t%{ref_id}"
+      clip_what: "\t%{what} : \t%{nm}\t%{id}\t%{ref_id}"
+      clip_info: "\t\t\t\t\t%{what}\n"
+      clip_err: "\t\t\t\t\tERROR: %{err}\n"
+      clip_header: "Row\tStatus\tTitle\tURI\tRef ID\tInfo"
+      ao: Archival Object
+      tc: Top Container
+      subj: Subject
+      agent: Agent
+      dig: Digital Object
+      unfound_id: "PLACEHOLDER FOR %{type} ID %{id} NOT FOUND"
+      ref_id_notfound: "Ref Id %{refid} not found"
+      error:
+       date_type: "Date type [%{what}] invalid. Defaulting to 'inclusive'"
+       certainty: "Invalid 'date certainty' ignored: (%{what})"
+       below_bad_ao: Cannot process because it's a child of the bad archival object
+       enum: "NOT FOUND: '%{label}' not found in list %{which}"
+       invalid_date: "Invalid date definition (%{what})"
+       too_many: More than one match found in the database
+       type_undef: Unable to determine type
+       file_name: File name cannot be determined
+       system: "Some system error has occurred  [%{msg}]."
+       initialize: "Processing is terminated [%{msg}]"
+       stopped: "Processing stopped at row %{row} [%{msg}]"
+       res_ead: This form's Resource is missing an EAD ID
+       row_ead: This row is missing an EAD ID
+       ead_mismatch:  "Form's EAD ID [%{res_ead}] does not match row's EAD ID [%{row_ead}]"
+       title: Missing title
+       title_and_date: Missing Title AND Valid Date definition
+       hier_miss: Missing hierachy -- must be a number greater than 0
+       hier_zero: Hierarchy must be greater than 0 
+       hier_wrong: Hierarchy cannot not be more than one level deeper than the previous row
+       hier_wrong_resource:  did you mean to start processing with an archival object selected?
+       hier_below_error_level: The parent archival object was not created
+       level: Missing valid Description level
+       date: "Date must have at least one of: Date begin; Date end; or Date expression"
+       number: Missing Extent number
+       extent_type:  Missing Extent type
+       extent_validation: "Unable to validate extent: %{msg}" 
+       no_header: No header (field codes) row found; are you using the correct template?
+       no_data: No processible data rows found!
+       excel: "Error(s) parsing Excel File %{errs}"
+       no_agent: "Unable to create Agent %{num}: [%{why}]"
+       no_tc: "Unable to create Top Container: [%{why}]"
+       missing_instance_type: Missing instance type
+       no_container_instance: "Unable to create Container Instance: [%{why}]"
+       no_subject: "Unable to create Subject %{num}: [%{why}]"
+       no_move: "Unable to move the archival objects from the end of the list (response code %{code})"
+       bad_note: "%{type} note is not wellformed: %{msg}"
+       bad_relator: "Unable to create agent link: '%{label}' is not a valid relator"
+       relator_invalid: "Unable to create agent link due to problem with relator '%{label}': %{why}" 
+       has_dig_obj: "Archival object already has an associated digital object"
+       ref_id_miss: No Ref Id specified
+       dig_info_miss: Neither the Digital Object URN or the Thumbnail URN is specified
+
+
