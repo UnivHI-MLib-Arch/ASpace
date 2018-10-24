@@ -83,13 +83,13 @@
 ## Another example below sets the boost query value (bq) to boost the relevancy for the query string in the title,
 ## sets the phrase fields parameter (pf) to boost the relevancy for the title when the query terms are in close proximity to
 ## each other, and sets the phrase slop (ps) parameter for the pf parameter to indicate how close the proximity should be
-  AppConfig[:solr_params] = {
-      "bq" => proc { "title:\"#{@query_string}\"*" },
-      "pf" => 'title^10',
-      "ps" => 1,
-    }
+##  AppConfig[:solr_params] = {
+##      "bq" => proc { "title:\"#{@query_string}\"*" },
+##      "pf" => 'title^10',
+##      "ps" => 0,
+##    }
 ## Configuring search operator to be AND by default - ANW-427
-AppConfig[:solr_params] = { "op" => "AND" }
+#AppConfig[:solr_params] = { "op" => "AND" }
 #
 ## Set the application's language (see the .yml files in
 ## https://github.com/archivesspace/archivesspace/tree/master/common/locales for
@@ -97,7 +97,7 @@ AppConfig[:solr_params] = { "op" => "AND" }
 #AppConfig[:locale] = :en
 #
 ## Plug-ins to load. They will load in the order specified
-AppConfig[:plugins] = ['local',  'lcnaf', 'aspace-import-excel']
+#AppConfig[:plugins] = ['local',  'lcnaf']
 #
 ## The number of concurrent threads available to run background jobs
 ## Introduced for AR-1619 - long running jobs were blocking the queue
@@ -281,7 +281,7 @@ AppConfig[:plugins] = ['local',  'lcnaf', 'aspace-import-excel']
 #
 ## URL to direct the feedback link
 ## You can remove this from the footer by making the value blank.
-AppConfig[:feedback_url] = ""
+#AppConfig[:feedback_url] = "http://archivesspace.org/feedback"
 #
 ## Allow an unauthenticated user to create an account
 #AppConfig[:allow_user_registration] = true
@@ -358,38 +358,61 @@ AppConfig[:feedback_url] = ""
 ## the new public UI application.
 ## Note - any changes to record_inheritance config will require a reindex of pui
 ## records to take affect. To do this remove files from indexer_pui_state
-AppConfig[:record_inheritance] = {
-  :archival_object => {
-    :inherited_fields => [
-                          {
-                            :property => 'title',
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'component_id',
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'dates',
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'notes',
-                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'accessrestrict'} },
-                            :inherit_directly => false
-                          },
-                         ]
-  }
-}
+#AppConfig[:record_inheritance] = {
+#  :archival_object => {
+#    :inherited_fields => [
+#                          {
+#                            :property => 'title',
+#                            :inherit_directly => true
+#                          },
+#                          {
+#                            :property => 'component_id',
+#                            :inherit_directly => false
+#                          },
+#                          {
+#                            :property => 'language',
+#                            :inherit_directly => true
+#                          },
+#                          {
+#                            :property => 'dates',
+#                            :inherit_directly => true
+#                          },
+#                          {
+#                            :property => 'extents',
+#                            :inherit_directly => false
+#                          },
+#                          {
+#                            :property => 'linked_agents',
+#                            :inherit_if => proc {|json| json.select {|j| j['role'] == 'creator'} },
+#                            :inherit_directly => false
+#                          },
+#                          {
+#                            :property => 'notes',
+#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'accessrestrict'} },
+#                            :inherit_directly => true
+#                          },
+#                          {
+#                            :property => 'notes',
+#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'scopecontent'} },
+#                            :inherit_directly => false
+#                          },
+#                          {
+#                            :property => 'notes',
+#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'langmaterial'} },
+#                            :inherit_directly => false
+#                          },
+#                         ]
+#  }
+#}
 #
 ## To enable composite identifiers - added to the merged record in a property _composite_identifier
 ## The values for :include_level and :identifier_delimiter shown here are the defaults
 ## If :include_level is set to true then level values (eg Series) will be included in _composite_identifier
 ## The :identifier_delimiter is used when joining the four part identifier for resources
-AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
-  :include_level => true,
-  :identifier_delimiter => ' '
-}
+##AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
+##  :include_level => false,
+##  :identifier_delimiter => ' '
+##}
 #
 ## To configure additional elements to be inherited use this pattern in your config
 ##AppConfig[:record_inheritance][:archival_object][:inherited_fields] <<
@@ -440,7 +463,7 @@ AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
 ## TODO: Clean up configuration options
 #
 #AppConfig[:pui_search_results_page_size] = 10
-AppConfig[:pui_branding_img] = 'UHML-logo.png'
+#AppConfig[:pui_branding_img] = 'archivesspace.small.png'
 #AppConfig[:pui_block_referrer] = true # patron privacy; blocks full 'referer' when going outside the domain
 #AppConfig[:pui_enable_staff_link] = true # attempt to add a link back to the staff interface
 #
@@ -454,10 +477,10 @@ AppConfig[:pui_branding_img] = 'UHML-logo.png'
 #
 ## The following determine which 'tabs' are on the main horizontal menu
 #AppConfig[:pui_hide] = {}
-AppConfig[:pui_hide][:repositories] = true
+#AppConfig[:pui_hide][:repositories] = false
 #AppConfig[:pui_hide][:resources] = false
 #AppConfig[:pui_hide][:digital_objects] = false
-AppConfig[:pui_hide][:accessions] = true
+#AppConfig[:pui_hide][:accessions] = false
 #AppConfig[:pui_hide][:subjects] = false
 #AppConfig[:pui_hide][:agents] = false
 #AppConfig[:pui_hide][:classifications] = false
@@ -467,7 +490,7 @@ AppConfig[:pui_hide][:accessions] = true
 #AppConfig[:pui_hide][:resource_badge] = false
 #AppConfig[:pui_hide][:record_badge] = true # hide by default
 #AppConfig[:pui_hide][:digital_object_badge] = false
-AppConfig[:pui_hide][:accession_badge] = true
+#AppConfig[:pui_hide][:accession_badge] = false
 #AppConfig[:pui_hide][:subject_badge] = false
 #AppConfig[:pui_hide][:agent_badge] = false
 #AppConfig[:pui_hide][:classification_badge] = false
@@ -479,7 +502,7 @@ AppConfig[:pui_hide][:accession_badge] = true
 ## AppConfig[:pui_hide][:accessions] = true
 #
 ## the following determine when the request button is displayed
-AppConfig[:pui_requests_permitted_for_types] = [:accession]
+#AppConfig[:pui_requests_permitted_for_types] = [:resource, :archival_object, :accession, :digital_object, :digital_object_component]
 #AppConfig[:pui_requests_permitted_for_containers_only] = false # set to 'true' if you want to disable if there is no top container
 #
 ## Repository-specific examples.  Replace {repo_code} with your repository code, i.e. 'foo' - note the lower-case
@@ -497,7 +520,7 @@ AppConfig[:pui_requests_permitted_for_types] = [:accession]
 ## Enable / disable PUI resource/archival object page actions
 #AppConfig[:pui_page_actions_cite] = true
 #AppConfig[:pui_page_actions_bookmark] = true
-AppConfig[:pui_page_actions_request] = false
+#AppConfig[:pui_page_actions_request] = true
 #AppConfig[:pui_page_actions_print] = true
 #
 ## Add page actions via the configuration
@@ -574,5 +597,3 @@ AppConfig[:pui_page_actions_request] = false
 #
 ##The number of characters to truncate before showing the 'Read More' link on notes
 #AppConfig[:pui_readmore_max_characters] = 450
-
-AppConfig[:db_url] = "jdbc:mysql://localhost:3306/archivesspace?user=archivesspace&password=994coverloudwindowsettledreason319&useUnicode=true&characterEncoding=UTF-8"
