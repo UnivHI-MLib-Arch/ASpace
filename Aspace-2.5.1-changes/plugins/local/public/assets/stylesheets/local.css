@@ -1,0 +1,30 @@
+
+h1, .h1 { color: #024731; }
+h2, .h2 { color: #0b5a3e; }
+h3, a { color: #4d8872; }
+
+#header > .row { border-bottom: 0.25rem solid #024731; }
+#footer > .row { color: #363636; }
+#footer > .row > p, ul { color: #dddddd; }
+
+
+.btn-primary {
+  background-color: #024731;
+  border-color: #4d8872;
+}
+
+.btn-primary:focus,.btn-primary.focus { background-color: #0b5a3e; }
+.btn-primary:hover { background-color: #0b5a3e; }
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  background-color: #024731;
+  border-color: #024731;
+}
+.pagination > li > a, .pagination > li > span { color: #4d8872; }
+
+.navbar-default .navbar-nav > li > a { color: #0b5a3e; }
