@@ -2,10 +2,11 @@
 h1, .h1 { color: #024731; }
 h2, .h2 { color: #0b5a3e; }
 h3, a { color: #4d8872; }
+ul { color : #444444; }
 
 #header > .row { border-bottom: 0.25rem solid #024731; }
 #footer > .row { color: #363636; }
-#footer > .row > p, ul { color: #dddddd; }
+#footer > .row > p { color: #dddddd; }
 
 
 .btn-primary {
