@@ -9,4 +9,6 @@ Notes:
 
   * Note to self: When putting together the "2.5.1" folder, remember to look for & use the latest version, NOT the one that's in the "AS-changes" folder
 
+  * Likewise, various additional config file changes (to improve PUI search results) were implemented in June 2021; these are not yet reflected in this repo
+
   * (Also, ignore the 'July 3rd' branch!)
