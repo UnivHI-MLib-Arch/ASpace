@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"original_requested:ETI"@Bundler::Molinillo::Resolver::Resolution#original_requested;TI"R;T:publico:RDoc::Markup::Document:
+@fileI"=lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"C@return [Array] the dependencies that were explicitly required;TF@I"-Bundler::Molinillo::Resolver::Resolution;TcRDoc::NormalClass0

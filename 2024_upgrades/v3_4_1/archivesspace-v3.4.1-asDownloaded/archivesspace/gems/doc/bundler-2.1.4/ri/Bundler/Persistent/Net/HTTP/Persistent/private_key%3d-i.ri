@@ -1,0 +1,6 @@
+U:RDoc::AnyMethod[iI"private_key=:ETI"<Bundler::Persistent::Net::HTTP::Persistent#private_key=;TF:publico:RDoc::Markup::Document:
+@fileI"Flib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"'Sets this client's SSL private key;T00[[I"	key=;To;;	@
+;
+0;[o;;[I"For Net::HTTP parity;TI"
+(key);T@
+FI"Persistent;TcRDoc::NormalClass00

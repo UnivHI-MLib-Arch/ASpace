@@ -1,0 +1,487 @@
+# NOTE: Many of the translations in this file have been generated using
+# Google translate
+ja:
+  brand:
+    title: ArchivesSpaceパブリックインターフェイス
+    title_link_text: ArchivesSpaceのホームページに戻る
+    welcome_head: ArchivesSpaceへようこそ
+    welcome_message: "<p>コレクション、デジタル資料などを検索します。 </p>"
+    welcome_page_title: ArchivesSpaceパブリックインターフェイス
+  actions:
+    search: サーチ
+    search_header: アーカイブを検索
+    search_within: 結果内で検索する
+    search_in: 検索%{type}
+    new_search: 新しい検索
+    refine_search: 絞り込み検索
+    close: 閉じる
+    backup: 前のページに戻る
+    backup_abbr: 戻る
+    cite: 引用
+    cite_item: 項目を引用
+    cite_item_description: アイテムの説明を引用
+    request: 要求
+    print: 印刷
+    print-generating: 生成
+    collection_overview: コレクションの概要
+    hierarch: 収集組織
+    numeric: コンテナインベントリ
+    clipboard: クリップボードにコピー
+    cilpboard_cite_item: アイテムの引用をクリップボードにコピーする
+    cilpboard_cite_item_description: アイテムの説明の引用をクリップボードにコピーする
+    search_add_row: 検索行を追加する
+    search_remove_row: 下の行を削除
+    staff_link: 関係者以外立ち入り禁止
+  page_actions: ページアクション
+  request:
+    email_header: ご依頼ありがとうございます
+    required: 必須
+    user_name: あなたの名前
+    user_email: メールアドレス
+    date: 到着予定日
+    note: スタッフへの注意
+    visit: 訪問するリクエストを送信%{repo_name}表示するには<strong>%{archival_object}</strong>
+    submit: リクエストを送信する
+    submitted: ありがとう、あなたの要求が提出されました。間もなくあなたのリクエストのコピーが入った電子メールが届きます。
+    errors:
+      name: あなたの名前を入力してください
+      email: 有効なメールアドレスを入力してください
+    email:
+      subject: "%{title}へのリクエスト"
+  search-button:
+    label: サーチ
+  search-limit: "%{limit}"
+  search-limiting: "%{limit}"
+  search-limits:
+    all: すべてのレコードタイプ
+    repository: リポジトリ
+    repositories: リポジトリ
+    resource: コレクション
+    resources: コレクション
+    digital: デジタル資料
+    digital_object: デジタル資料
+    objects: アーカイブまたはデジタル記録
+    subject: 主題
+    agent: コンテンツクリエータ
+    agents: コンテンツ制作者
+  search-field: 検索フィールド
+  searched-field: 検索%{field}
+  pagination: {}
+  search_results:
+    page_title: 見つかった%{count}結果
+    results_head: "%{type} ： %{start} - %{end}の%{total}"
+    result: 結果
+    results: 結果
+    search_for: 検索%{type}ここで%{conditions}
+    keyword_contain: "<strong>キーワード</strong> ： <span class='searchterm'>%{kw}</span>"
+    title_contain: "<strong>タイトルに</strong>は<span class='searchterm'>%{kw}</span>"
+    notes_contain: "<strong>音符に</strong>は<span class='searchterm'>%{kw}</span>"
+    creators_text_contain: "<strong>作成者</strong>に<span class='searchterm'>%{kw}</span>"
+    subjects_text_contain: "<strong>被写体に</strong>は<span class='searchterm'>%{kw}</span>"
+    identifier_contain: "<strong>識別子に</strong>は<span class='searchterm'>%{kw}</span>"
+    in_repository: "<strong>%{name}</strong>"
+    anything: "*"
+    search_term: 検索語
+    error: 予期しないエラーのために検索を完了できませんでした
+    no_results: レコードが見つかりません
+    filter_by: フィルタリングする
+    filtered_by: フィルタリングされた
+    remove_filter: このフィルタを削除
+    more_facets: もっと
+    fewer_facets: もっと少なく
+    op:
+      AND: AND
+      OR: OR
+      NOT: NOT
+    op_first_row:
+      NOT: ない
+    filter:
+      head: 結果をフィルタリングする
+      add: 追加のフィルタ
+      form: 検索結果内で検索する
+      show_fewer: 表示回数を減らす
+      show_more: もっと見せる
+      query: テキスト
+      subjects: 件名
+      primary_type: タイプ
+      repository: リポジトリ
+      used_within_published_repository: リポジトリ
+      creators: クリエイター
+      fullrecord: キーワード
+      subjects_text: 件名
+      title: タイトル
+      creators_text: クリエイター
+      scope: 範囲
+      notes: ノート
+      identifier: 識別
+      source: ソース
+      published_agents: 名前
+      agents_text: 名前
+      classification_uri: 分類
+      linked_agent_roles: 役割
+      from_year: 年から
+      to_year: 年に
+      years: 年
+      from: から
+      to: に
+      years_include: 含まれる年数
+      year_now: 今
+      year_begin: 始まり
+      from_to: 年： %{begin}から%{end}
+      child_container_u_sstr: 子コンテナ
+      grand_child_container_u_sstr: 孫のコンテナ
+      type_enum_s: タイプ
+      published_series_title_u_sstr: シリーズ
+      instance_type_enum_s: インスタンスの種類
+      langcode: 言語
+
+  search_sorting:
+    sort_by: 並び替え：
+    sort: ソート
+    asc: "（上昇）"
+    desc: "（降順）"
+    relevance: 関連性
+    title_sort: タイトル
+    identifier: 識別
+    year_sort: 年
+    sorting: "%{type} %{direction}"
+    classification_identifier: 識別
+  inherit:
+    inherited: "%{level} ："
+    collection: コレクション
+    series: シリーズ
+    sub-series: サブシリーズ
+    class: クラス
+    file: ファイル
+    fonds: 資金
+    item: 項目
+    otherlevel: その他のレベル
+    recordgrp: レコードグループ
+    subfonds: サブフォンズ
+    subgrp: サブグループ
+  errors:
+    error_404: "%{type}レコードが見つかりません"
+    error_404_message: あなたがアクセスしようとした%{type}レコードは存在しないか、削除されている可能性があります。
+    backend_down: データベースに接続できません
+    backend_down_message: ArchivesSpaceは現在技術的な問題を抱えています。ご迷惑をおかけしましたことをお詫び申し上げます。後でもう一度お試しください。
+    unexpected_error: 予期しないエラーのためにリクエストを完了できませんでした
+  boolean:
+    'true': はい
+    'false': いいえ
+  navbar:
+    search_placeholder: 検索用語を入力してください
+    error_no_term: 検索語が入力されていません。
+    toggle_navigation: Toggle Navigation
+  internal_links:
+    main: メインコンテンツ
+    filter: 結果をフィルタリングする
+    search_collection: コレクション内で検索する
+  accordion:
+    expand: すべて展開
+    collapse: すべてを折りたたむ
+  advanced_search:
+    operator_label: 検索演算子
+    operator:
+      AND: AND
+      OR: OR
+      NOT: NOT
+    nav_switcher: {}
+    index_switcher: {}
+    limit_label: レコードタイプによる制限
+    add_row: 行を追加
+    remove_row: 行を削除
+  contains: "%{count} %{type}含みます%{type}"
+  found: "%{count} %{type}見つかりました"
+  coll_obj:
+    _singular: コレクションまたはレコード
+    _plural: コレクションおよび/またはレコード
+  scope_note: スコープノート
+  multiple_containers: 複数のコンテナ
+  extent_number_type: "%{number} %{type}"
+  extent_phys_details: "： %{deets}"
+  extent_dims: "; %{dimensions}"
+  external_docs: 外部ドキュメント
+  more_about: もっと詳しく
+  list: "%{type}リスト"
+  cont_arr: 収集組織
+  dig_cont_arr: デジタルオブジェクトの組織
+  subgroups: サブグループ
+  accessed: アクセスされた
+  containers: 物理ストレージ情報
+  related_accessions: 関連する未加工材料
+  related_resources: 関連コレクション
+  linked_instances: リンクされたレコード
+  linked_digital_objects: デジタル素材
+  accession:
+    _singular: 未処理
+    _plural: 未加工材料
+    _public:
+      section:
+        acquisition_type: 獲得タイプ
+        provenance: 出所
+        language: 説明の言語
+        script: 説明のスクリプト
+        access_restrictions: アクセス制限
+        access_restrictions_apply: アクセス制限の適用
+        use_restrictions: 使用制限
+        use_restrictions_apply: 制限を適用する
+        content_description: コンテンツの説明
+        inventory: 目録
+      related_accessions:
+        accessions: 関連する未加工材料
+        deaccessions: Deaccessionedマテリアル
+        forms_part_of: 部品の関係
+        sibling_of: 兄弟関係
+  archival_object:
+    _public:
+      section: {}
+      messages: {}
+      header:
+        ref_id: 参照識別子
+  archive:
+    _singular: アーカイブ
+    _plural: アーカイブ
+  repository:
+    _singular: リポジトリ
+    _plural: リポジトリ
+    what: このリポジトリには何が入っていますか？
+    details: リポジトリの詳細
+    part: の一部
+  context: 見つかった
+  context_delimiter: "/"
+  bulk:
+    _singular: "%{dates}にあるマテリアルの大半"
+    _plural: "%{dates}以内に見つかったマテリアルの大半"
+  resource:
+    _singular: コレクション
+    _plural: コレクション
+    identifier_separator: ":"
+    _public:
+      identifier: 識別
+      extent: エクステント
+      dates: 日付
+      lang: 材料の言語
+      script: スクリプト
+      digital_object: デジタルオブジェクト
+      physdesc: 身体的特徴
+      storage: コンテナ情報
+      additional: 追加の説明
+      section: {}
+      messages: {}
+      finding_aid:
+        head: 援助と行政情報の検索
+        title: タイトル
+        subtitle: 字幕
+        status: 状態
+        author: 著者
+        date: 日付
+        description_rules: 説明ルール
+        identifier: 識別
+        language: 説明の言語
+        script: 説明のスクリプト
+        language_note: 説明文の言語
+        sponsor: スポンサー
+        edition_statement: 版ステートメント
+        series_statement: シリーズ声明
+        note: 注意
+        revision: 改訂ステートメント
+      related_accessions:
+        accessions: 受付記録
+        deaccessions: デアクセスレコード
+  top_container:
+    _singular: コンテナ
+    _plural: コンテナ
+  related_resource: {}
+  digital_object:
+    _singular: デジタルレコード
+    _plural: デジタル素材
+    _public:
+      thumbnail: サムネイル
+      link: デジタルオブジェクトへのリンク
+      badge_label: デジタル%{level}
+      go: ファイルに移動
+      section: {}
+      messages: {}
+      browse_number_digital_objects_in_collection: コレクションの%{num}つのディジタルオブジェクトを閲覧する
+  digital_object_component:
+    _public:
+      section: {}
+      messages: {}
+  subject:
+    _singular: 件名
+    _plural: 科目
+  component: {}
+  classification:
+    _singular: レコードグループ
+    _plural: レコードグループ
+    creator: クリエイター
+    identifier_separator: "。"
+    _public:
+      actions:
+        show_subgroups: サブグループを表示
+  classification_term:
+    _singular: レコードグループ期間
+    _plural: レコードグループ規約
+    identifier_separator: "/"
+  an_agent: 名
+  pui_agent:
+    _singular: 名
+    _plural: 名前
+    related: 関連する名前
+    parallel: 並列名
+    also_known_as: 次の名前でも知られています
+  record:
+    _singular: 記録
+    _plural: 記録
+  record_group:
+    _singular: レコードグループ
+    _plural: レコードグループ
+  agent:
+    _singular: 名
+    _plural: 名前
+    _public:
+      section:
+        dates: 日付
+        other_names: 名前フォーム
+        related_agents: 関連する名前
+        related_agent_description: 説明
+        related_agent_dates: 日付
+  agent_person:
+    _singular: 人
+    _plural: 人々
+  agent_family:
+    _singular: 家族
+    _plural: 家族
+  agent_corporate_entity:
+    _singular: 組織
+    _plural: 組織
+  agent_software:
+    _singular: ソフトウェア
+    _plural: ソフトウェア
+  components: {}
+  instance:
+    _public: {}
+  record_tree: {}
+  description: 約
+  contact: 接触
+  number_of: "%{type}数："
+  parent_inst: 親機関
+  email: メールを送る
+  fax: ファックス
+  pdf_reports:
+    administrative_information: 行政情報
+    collection_inventory: コレクションインベントリ
+    summary_information: 要約情報
+    table_of_contents: 目次
+    publication_statement: 出版物
+    controlled_access_headings: 制御されたアクセス見出し
+    finding_aid_date_prefix: この発見支援は、ArchivesSpace on
+    finding_aid_written_in: 書かれた援助を見つける
+    your_finding_aid_pdf: "&quot; %{title} &quot;の検索援助PDF"
+    your_finding_aid_is_attached: あなたが求めた援助が添付されています。
+  readmore:
+    see_more: 続きを見る
+    see_less: もっと見る
+  skipnav:
+    main_content: メインコンテンツへスキップ
+    search: 検索にスキップする
+    search_results: 検索結果にスキップする
+  search_tab: 検索%{target}
+
+  agent_function:
+    _singular: 関数
+    _plural: 機能
+  agent_gender:
+    _singular: 性別
+    _plural: 性別
+  agent_place:
+    _singular: 場所
+    _plural: 場所
+  agent_resource:
+    _singular: 関連する外部リソース
+    _plural: 関連する外部リソース
+  agent_occupation:
+    _singular: 職業
+    _plural: 職業
+  agent_topic:
+    _singular: トピック
+    _plural: トピック
+  agent_record_identifier:
+    _frontend:
+      action: {}
+    identifier_type: 識別子の種類
+    source: ソース
+    primary_identifier: 一次識別子はありますか？
+    record_identifier: レコード識別子
+    snac: ソーシャルネットワークとアーカイブコンテキスト（SNAC）識別子
+  agent_identifier:
+    _frontend:
+      action: {}
+    identifier_type: 識別子の種類
+    entity_identifier: エンティティID
+  dates_of_existence: {}
+  date_label:
+    existence: 存在
+    usage: 使用法
+  use_date:
+    _plural: 使用日
+    _singular: 使用日
+  used_language:
+    _plural: 使用される言語
+    _singular: 使用言語
+  structured_date_label:
+    date: 日付
+  structured_date_single: {}
+  structured_date_range: {}
+  agent_contact:
+    name: 連絡先
+    salutation: あいさつ
+    address_1: 住所（1
+    address_2: アドレス2
+    address_3: 住所3
+    city: 市
+    region: 州/地域
+    country: 国
+    post_code: 郵便番号
+    fax: ファックス
+    email: Eメール
+  telephone:
+    _plural: 電話番号
+    number_type: 番号タイプ
+    number: 数
+    ext: 内線電話
+  telephone_required: {}
+  agent_notes:
+    _singular: 注意
+    _plural: ノート
+    persistent_id: 永続ID
+    type: ノートタイプ
+    content: コンテンツ
+    note_citation: 引用
+    note_bioghist: バイオグラフィー
+    note_general_context: 一般的なコンテキスト
+    note_legal_status: 法的地位
+    note_mandate: 委任
+    note_structure_or_genealogy: 構造または系図
+    note_text: 注意
+  metadata_rights_declaration:
+    file_version_xlink_show_attribute: Xlinkの属性を表示
+    last_verified_date: 最終確認日
+    _plural: メタデータの権利宣言
+    _singular: メタデータの権利宣言
+    license: ライセンス
+    descriptive_note: 注釈
+    file_uri: ファイルURI
+    xlink_title_attribute: Xlinkタイトル属性
+    xlink_role_attribute: Xlinkロール属性
+    xlink_arcrole_attribute: XlinkArcrole属性
+    file_version_xlink_actuate_attribute: XlinkActuate属性
+
+
+  languages:
+    select: 言語を選択する
+    en: 英語
+    es: スペイン語
+    fr: フランス語
+    de: ドイツ語
+    ja: 日本語

@@ -1,0 +1,8 @@
+language: ruby
+jdk:
+  - openjdk8
+rvm:
+  - jruby-1.7.24
+  - jruby-1.7.27
+  - jruby-9.1
+  - jruby-9.2

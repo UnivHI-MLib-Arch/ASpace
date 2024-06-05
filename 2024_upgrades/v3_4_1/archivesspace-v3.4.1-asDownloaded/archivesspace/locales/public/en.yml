@@ -1,0 +1,558 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  brand:
+    title: ArchivesSpace Public Interface
+    title_link_text: Return to the ArchivesSpace homepage
+    welcome_head: Welcome to ArchivesSpace
+    welcome_message: |
+      <p>Search across our collections, digital materials, and more.</p>
+    welcome_page_title: ArchivesSpace Public Interface
+
+  actions:
+    search: Search
+    search_header: Search The Archives
+    search_within: Search within results
+    search_in: "Search %{type}"
+    new_search: New Search
+    refine_search: Refine Search
+    close: Close
+    backup: Return to the previous page
+    backup_abbr: Go back
+    cite: Citation
+    cite_item: Cite Item
+    cite_item_description: Cite Item Description
+    digitized: View Digital Material
+    request: Request
+    print: Print
+    print-generating: Generating
+    collection_overview: Collection Overview
+    hierarch: Collection Organization
+    numeric: Container Inventory
+    clipboard: Copy to clipboard
+    cilpboard_cite_item: Copy item citation to clipboard
+    cilpboard_cite_item_description: Copy item description citation to clipboard
+    search_add_row: Add a search row
+    search_remove_row: Remove the row below
+    staff_link: Staff Only
+    next: Next
+    previous: Previous
+
+  page_actions: Page Actions
+
+  request:
+    email_header: Thank you for your request
+    required: required
+    user_name: Your name
+    user_email: Your email address
+    date: Anticipated arrival date
+    note: Note to the staff
+    visit: "Submit a request to visit %{repo_name} to view <strong>%{archival_object}</strong>"
+    submit: Submit Request
+    submitted: Thank you, your request has been submitted.  You will soon receive an email with a
+      copy of your request.
+    errors:
+      name: Please enter your name
+      email: Please enter a valid email address
+    email:
+      subject: "Request for %{title}"
+
+  search-button:
+    label: Search
+  search-limit: "Limit to %{limit}"
+  search-limiting: "limited to %{limit}"
+  search-limits:
+    all: all record types
+    repository: repositories
+    repositories: repositories
+    resource: collections
+    resources: collections
+    digital: digital materials
+    digital_object: digital materials
+    objects: archival or digital records
+    subject: subject
+    agent: content creator
+    agents: content creators
+  search-field: Search field
+  searched-field: "searching %{field}"
+
+  search_results:
+    page_title: "Found %{count} Results"
+    results_head: "Showing %{type}: %{start} - %{end} of %{total}"
+    result: Result
+    results: Results
+    search_for: "Search %{type} where %{conditions}"
+    keyword_contain: "<strong>keyword(s)</strong>: <span class='searchterm'>%{kw}</span>"
+    title_contain: "the <strong>title</strong> contains  <span class='searchterm'>%{kw}</span>"
+    notes_contain: "the <strong>note</strong> contains  <span class='searchterm'>%{kw}</span>"
+    creators_text_contain: "the <strong>creator</strong> contains\
+      \ <span class='searchterm'>%{kw}</span>"
+    subjects_text_contain: "the <strong>subject</strong> contains\
+      \ <span class='searchterm'>%{kw}</span>"
+    identifier_contain: "the <strong>identifier</strong> contains\
+      \ <span class='searchterm'>%{kw}</span>"
+    in_repository: " in <strong>%{name}</strong>"
+    anything: "*"
+    search_term: Search term
+    error: Your search could not be completed due to an unexpected error
+    no_results: No Records Found
+    filter_by: Filter By
+    filtered_by: Filtered By
+    remove_filter: Remove this filter
+    more_facets: more
+    fewer_facets: less
+    op:
+      AND: and
+      OR: or
+      NOT: and not
+    op_first_row:
+      NOT: not
+    filter:
+      head: Filter Results
+      add: Additional filters
+      form: Searching within results
+      show_fewer: Show fewer
+      show_more: Show more
+      query: Text
+      subjects: Subject
+      primary_type: Type
+      repository: Repository
+      used_within_published_repository: Repository
+      creators: Creator
+      fullrecord: Keyword
+      subjects_text: Subject
+      title: Title
+      creators_text: Creator
+      scope: Scope
+      notes: Notes
+      identifier: Identifier
+      source: Source
+      published_agents: Names
+      agents_text: Names
+      classification_uri: Classification
+      linked_agent_roles: Role
+      from_year: From year
+      to_year: To year
+      years: Years
+      from: From
+      to: To
+      years_include: Years to include
+      year_now: now
+      year_begin: the beginning
+      from_to: "Years: %{begin} to %{end}"
+      child_container_u_sstr: Child container
+      grand_child_container_u_sstr: Grandchild container
+      type_enum_s: Type
+      published_series_title_u_sstr: Series
+      instance_type_enum_s: Instance type
+      langcode: Language
+      digital_object_type_enum_s: Type
+      extent_type_enum_s: Extent
+
+  search_sorting:
+    sort_by: "Sort by:"
+    sort: Sort
+    asc: (ascending)
+    desc: (descending)
+    relevance: Relevance
+    title_sort: Title
+    identifier: Identifier
+    year_sort: Year
+    sorting: "%{type} %{direction}"
+    classification_identifier: Identifier
+
+  inherit:
+    inherited: "From the %{level}:"
+    collection: Collection
+    series: Series
+    sub-series: Sub-Series
+    class: Class
+    file: File
+    fonds: Fonds
+    item: Item
+    otherlevel: Other Level
+    recordgrp: Record Group
+    subfonds: Sub-Fonds
+    subgrp: Sub-Group
+
+  errors:
+    error_404: "%{type} Record Not Found"
+    error_404_message: "The %{type} record you've tried to access does not exist or may have been\
+      \ removed."
+    backend_down: Unable to Connect to Database
+    backend_down_message: ArchivesSpace is currently experiencing technical difficulties. We
+      apologise for the inconvenience. Please try again later.
+    unexpected_error: Your request could not be completed due to an unexpected error
+    invalid_search_params: "Invalid search parameter '%{value}' for field '%{field}'"
+
+  boolean:
+    "true": "Yes"
+    "false": "No"
+
+  navbar:
+    search_placeholder: Enter your search terms
+    error_no_term: No search term(s) entered.
+    toggle_navigation: Toggle Navigation
+
+  navigation:
+    hierarchical: hierarchical navigation
+    top_level: top-level navigation
+
+  internal_links:
+    main: Main Content
+    filter: Filter Results
+    search_collection: Search within collection
+
+  accordion:
+    expand: Expand All
+    collapse: Collapse All
+
+  advanced_search:
+    operator_label: Operator
+    operator:
+      AND: And
+      OR: Or
+      NOT: Not
+    limit_label: Limit by record type
+    add_row: Add row
+    remove_row: Remove row
+
+  contains: "Contains %{count} %{type}"
+  found: "Found in %{count} %{type}"
+  coll_obj:
+    _singular: Collection or Record
+    _plural: Collections and/or Records
+
+  scope_note: Scope Note
+  multiple_containers: Multiple Containers
+  extent_number_type: "%{number} %{type}"
+  extent_phys_details: " : %{deets}"
+  extent_dims: " ; %{dimensions}"
+  external_docs: External Documents
+  more_about: More about
+  list: "%{type} List"
+  cont_arr: Collection organization
+  dig_cont_arr: Digital object organization
+  subgroups: Subgroups
+  accessed: Accessed
+  containers: Physical Storage Information
+  related_accessions: Related Unprocessed Material
+  related_resources: Related Collections
+  linked_instances: Linked Records
+  linked_digital_objects: Digital Material
+
+  context: Found in
+  context_delimiter: "/"
+  bulk:
+    _singular: "Majority of material found in %{dates}"
+    _plural: "Majority of material found within %{dates}"
+
+  archive:
+    _singular: The Archive
+    _plural: The Archives
+
+  accession:
+    _singular: Unprocessed Material
+    _plural: Unprocessed Materials
+    _public:
+      section:
+        acquisition_type: Acquisition Type
+        provenance: Provenance
+        language: Language of Description
+        script: Script of Description
+        access_restrictions: Access Restrictions
+        access_restrictions_apply: Access Restrictions Apply
+        use_restrictions: Use Restrictions
+        use_restrictions_apply: Use Restrictions Apply
+        content_description: Content Description
+        inventory: Inventory
+      related_accessions:
+        accessions: Related Unprocessed Material
+        deaccessions: Deaccessioned Material
+        forms_part_of: Part Relationship
+        has_part: Part Relationship
+        sibling_of: Sibling Relationship
+
+  archival_object:
+    _public:
+      header:
+        ref_id: Reference Identifier
+
+  repository:
+    _singular: Repository
+    _plural: Repositories
+    what: What's in this Repository?
+    details: Repository Details
+    part: Part of the
+
+  resource:
+    _singular: Collection
+    _plural: Collections
+    identifier_separator: ":"
+    _public:
+      identifier: Identifier
+      extent: Extent
+      dates: Dates
+      lang: Language of Materials
+      script: Script
+      digital_object: Digital Object
+      physdesc: Physical Description
+      storage: Container Information
+      additional: Additional Description
+      finding_aid:
+        head: Finding Aid & Administrative Information
+        title: Title
+        subtitle: Subtitle
+        status: Status
+        author: Author
+        date: Date
+        description_rules: Description rules
+        identifier: Identifier
+        language: Language of description
+        script: Script of description
+        language_note: Language of description note
+        sponsor: Sponsor
+        edition_statement: Edition statement
+        series_statement: Series statement
+        note: Note
+        revision: Revision Statements
+      related_accessions:
+        accessions: Accession Records
+        deaccessions: Deaccession Records
+
+  top_container:
+    _singular: Container
+    _plural: Containers
+    restricted: Restricted
+
+  digital_object:
+    _singular: Digital Record
+    _plural: Digital Materials
+    _public:
+      thumbnail: thumbnail
+      link: Link to digital object
+      badge_label: Digital %{level}
+      go: Go to file
+      additional: Additional File Versions
+      url_encoded_data: URL-encoded data
+      browse_number_digital_objects_in_collection: Browse %{num} digital objects in collection
+      
+  subject:
+    _singular: Subject
+    _plural: Subjects
+
+  classification:
+    _singular: Record Group
+    _plural: Record Groups
+    creator: Creator
+    identifier_separator: "."
+    _public:
+      actions:
+        show_subgroups: Show Subgroups
+
+  classification_term:
+    _singular: Record Group Term
+    _plural: Record Group Terms
+    identifier_separator: "/"
+
+  an_agent: Name
+
+  pui_agent:
+    _singular: Name
+    _plural: Names
+    parallel: Parallel Names
+    related: Related Names
+    also_known_as: Also known by the following names
+
+  record:
+    _singular: Record
+    _plural: Records
+
+  record_group:
+    _singular: Record Group
+    _plural: Record Groups
+
+  agent:
+    _singular: Name
+    _plural: Names
+    _public:
+      section:
+        other_names: Name Forms
+        related_agents: Related Names
+        dates: Dates
+        related_agent_description: Description
+        related_agent_dates: Dates
+
+  agent_person:
+    _singular: Person
+    _plural: People
+
+  agent_family:
+    _singular: Family
+    _plural: Families
+
+  agent_corporate_entity:
+    _singular: Organization
+    _plural: Organizations
+
+  agent_software:
+    _singular: Software
+    _plural: Software
+
+  agent_function:
+    _singular: Function
+    _plural: Functions
+
+  agent_gender:
+    _singular: Gender
+    _plural: Gender
+
+  agent_place:
+    _singular: Place
+    _plural: Places
+
+  agent_resource:
+    _singular: Related External Resource
+    _plural: Related External Resources
+
+  agent_occupation:
+    _singular: Occupation
+    _plural: Occupations
+
+  agent_topic:
+    _singular: Topic
+    _plural: Topics
+
+  description: About
+  contact: Contact
+  number_of: "Number of %{type}:"
+  parent_inst: Parent Institution
+  email: Send email
+  fax: Fax
+
+  pdf_reports:
+    administrative_information: Administrative Information
+    collection_inventory: Collection Inventory
+    summary_information: Summary Information
+    table_of_contents: Table Of Contents
+    publication_statement: Publication Statement
+    controlled_access_headings: Controlled Access Headings
+    finding_aid_date_prefix: This finding aid was produced using ArchivesSpace on
+    finding_aid_written_in: Finding aid written in
+    your_finding_aid_pdf: Your finding aid PDF for "%{title}"
+    your_finding_aid_is_attached: The finding aid you requested is attached.
+
+  readmore:
+    see_more: See more
+    see_less: See less
+
+  skipnav:
+    main_content: Skip to main content
+    search: Skip to search
+    search_results: Skip to search results
+
+  search_tab: Search %{target}
+
+  agent_record_identifier:
+    identifier_type: Identifier Type
+    source: Source
+    primary_identifier: Is Primary Identifier?
+    record_identifier: Record Identifier
+    snac: Social Networks and Archival Context (SNAC) Identifier
+
+  agent_identifier:
+    identifier_type: Identifier Type
+    entity_identifier: Entity ID
+
+  date_label:
+    existence: Existence
+    usage: Usage
+
+  use_date:
+    _plural: Use Dates
+    _singular: Use Date
+
+  used_language:
+    _plural: Languages Used
+    _singular: Language Used
+
+  structured_date_label:
+    date: Date
+
+  agent_contact:
+    name: Contact Name
+    salutation: Salutation
+    address_1: Address 1
+    address_2: Address 2
+    address_3: Address 3
+    city: City
+    region: State/Region
+    country: Country
+    post_code: Post Code
+    fax: Fax
+    email: E-mail
+
+  telephone:
+    _plural: Telephone Numbers
+    number_type: Number Type
+    number: Number
+    ext: Telephone Extension
+
+  agent_notes:
+    _singular: Note
+    _plural: Notes
+    persistent_id: Persistent ID
+    type: Note Type
+    content: Content
+    note_citation: Citation
+    note_bioghist: Biography
+    note_general_context: General Context
+    note_legal_status: Legal Status
+    note_mandate: Mandate
+    note_structure_or_genealogy: Structure or Genealogy
+    note_text: Note
+
+  metadata_rights_declaration:
+    _plural: Metadata Rights Declarations
+    _singular: Metadata Rights Declaration
+    license: License
+    descriptive_note: Descriptive Note
+    file_uri: File URI
+    xlink_title_attribute: Xlink Title Attribute
+    xlink_role_attribute: Xlink Role Attribute
+    xlink_arcrole_attribute: Xlink Arcrole Attribute
+    file_version_xlink_actuate_attribute: Xlink Actuate Attribute
+    file_version_xlink_show_attribute: Xlink Show Attribute
+    last_verified_date: Last Verified Date
+
+  footer:
+    staff_interface: <a href="%{staff_url}">Staff Interface</a>
+    archivesspace_home: Visit <a href='http://archivesspace.org'>ArchivesSpace.org</a>
+    feedback: <a id='aspaceFeedbackLink' href='%{feedback_url}' target='_blank'>Send Feedback or Report a Problem</a>
+
+  languages:
+    select: Select Language
+    en: English
+    es: Spanish
+    fr: French
+    de: German
+    ja: Japanese

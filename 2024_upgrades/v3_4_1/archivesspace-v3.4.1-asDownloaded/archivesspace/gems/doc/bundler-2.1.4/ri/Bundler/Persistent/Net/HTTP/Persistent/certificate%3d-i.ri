@@ -1,0 +1,6 @@
+U:RDoc::AnyMethod[iI"certificate=:ETI"<Bundler::Persistent::Net::HTTP::Persistent#certificate=;TF:publico:RDoc::Markup::Document:
+@fileI"Flib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"2Sets this client's OpenSSL::X509::Certificate;T00[[I"
+cert=;To;;	@
+;
+0;[o;;[I"For Net::HTTP parity;TI"(certificate);T@
+FI"Persistent;TcRDoc::NormalClass00

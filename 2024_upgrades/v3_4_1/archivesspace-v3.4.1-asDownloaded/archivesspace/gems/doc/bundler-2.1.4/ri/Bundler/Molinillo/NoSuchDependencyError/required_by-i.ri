@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"required_by:ETI":Bundler::Molinillo::NoSuchDependencyError#required_by;TI"RW;T:publico:RDoc::Markup::Document:
+@fileI"9lib/bundler/vendor/molinillo/lib/molinillo/errors.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"P@return [Array<Object>] the specifications that depended upon {#dependency};TF@I".Bundler::Molinillo::NoSuchDependencyError;TcRDoc::NormalClass0

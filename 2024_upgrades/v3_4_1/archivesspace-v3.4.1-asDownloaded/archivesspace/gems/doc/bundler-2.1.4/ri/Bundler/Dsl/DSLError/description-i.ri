@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"description:ETI"'Bundler::Dsl::DSLError#description;TI"R;T:publico:RDoc::Markup::Document:
+@fileI"lib/bundler/dsl.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"K@return [String] the description that should be presented to the user.;TF@I"Bundler::Dsl::DSLError;TcRDoc::NormalClass0

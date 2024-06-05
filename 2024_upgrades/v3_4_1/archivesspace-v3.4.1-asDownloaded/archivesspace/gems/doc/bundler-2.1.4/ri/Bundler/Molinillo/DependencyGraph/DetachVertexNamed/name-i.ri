@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:ETI"@Bundler::Molinillo::DependencyGraph::DetachVertexNamed#name;TI"R;T:publico:RDoc::Markup::Document:
+@fileI"Wlib/bundler/vendor/molinillo/lib/molinillo/dependency_graph/detach_vertex_named.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"6@return [String] the name of the vertex to detach;TF@I";Bundler::Molinillo::DependencyGraph::DetachVertexNamed;TcRDoc::NormalClass0

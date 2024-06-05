@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"iteration_rate:ETI"<Bundler::Molinillo::Resolver::Resolution#iteration_rate;TI"RW;T:privateo:RDoc::Markup::Document:
+@fileI"=lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb;T:0@omit_headings_from_table_of_contents_below0:@parts[o:RDoc::Markup::Paragraph;[I"L@return [Integer] the number of resolver iterations in between calls to;To:RDoc::Markup::Verbatim:@format0;[I"3{#resolver_ui}'s {UI#indicate_progress} method;TF@I"-Bundler::Molinillo::Resolver::Resolution;TcRDoc::NormalClass0
