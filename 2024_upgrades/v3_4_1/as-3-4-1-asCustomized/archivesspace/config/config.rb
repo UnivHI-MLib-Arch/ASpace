@@ -470,11 +470,11 @@ AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
 ## TODO: Clean up configuration options
 #
 AppConfig[:pui_search_results_page_size] = 15
-#AppConfig[:pui_branding_img] = 'ArchivesSpaceLogo.svg'
-#AppConfig[:pui_branding_img_alt_text] = 'ArchivesSpace - a community served by Lyrasis.'
+AppConfig[:pui_branding_img] = '/plugins/local/public/assets/images/UHML-logo.png'
+AppConfig[:pui_branding_img_alt_text] = 'UHM Hamilton Library'
 #
-#AppConfig[:frontend_branding_img] = 'archivesspace/ArchivesSpaceLogo.svg'
-#AppConfig[:frontend_branding_img_alt_text] = 'ArchivesSpace - a community served by Lyrasis.'
+AppConfig[:frontend_branding_img] = '/plugins/local/frontend/assets/images/UHML-logo.png'
+AppConfig[:frontend_branding_img_alt_text] = 'UHM Hamilton Library'
 #
 #AppConfig[:pui_block_referrer] = true # patron privacy; blocks full 'referrer' when going outside the domain
 #
