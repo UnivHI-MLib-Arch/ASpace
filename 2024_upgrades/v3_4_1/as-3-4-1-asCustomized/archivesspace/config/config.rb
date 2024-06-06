@@ -448,10 +448,10 @@ AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
 #
 AppConfig[:pui_search_results_page_size] = 15
 AppConfig[:pui_branding_img] = '/assets/images/UHML-logo.png'
-AppConfig[:pui_branding_img_alt_text] = 'UHM Hamilton Library logo'
+AppConfig[:pui_branding_img_alt_text] = 'UHM Hamilton Library homepage'
 #
 AppConfig[:frontend_branding_img] = '/assets/images/UHML-logo.png'
-AppConfig[:frontend_branding_img_alt_text] = 'UHM Hamilton Library logo'
+AppConfig[:frontend_branding_img_alt_text] = 'UHM Hamilton Library homepage'
 #
 #AppConfig[:pui_block_referrer] = true # patron privacy; blocks full 'referrer' when going outside the domain
 #
