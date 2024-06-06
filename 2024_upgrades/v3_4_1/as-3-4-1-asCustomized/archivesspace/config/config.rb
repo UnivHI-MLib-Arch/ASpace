@@ -123,7 +123,7 @@
 #AppConfig[:solr_indexing_frequency_seconds] = 30
 #AppConfig[:solr_facet_limit] = 100
 #
-#AppConfig[:default_page_size] = 10
+AppConfig[:default_page_size] = 15
 #AppConfig[:max_boolean_queries] = 1024 # ArchivesSpace Solr default
 #AppConfig[:max_page_size] = 250
 #
@@ -148,7 +148,7 @@
 #AppConfig[:indexer_solr_timeout_seconds] = 300
 #
 ## PUI Indexer Settings
-#AppConfig[:pui_indexer_enabled] = true
+AppConfig[:pui_indexer_enabled] = false
 #AppConfig[:pui_indexing_frequency_seconds] = 30
 #AppConfig[:pui_indexer_records_per_thread] = 25
 #AppConfig[:pui_indexer_thread_count] = 1
@@ -271,7 +271,7 @@
 #
 ## URL to direct the feedback link
 ## You can remove this from the footer by making the value blank.
-#AppConfig[:feedback_url] = "https://archivesspace.org/contact"
+AppConfig[:feedback_url] = ""
 #
 ## Allow an unauthenticated user to create an account
 #AppConfig[:allow_user_registration] = true
@@ -318,7 +318,7 @@
 #
 ## Allow mixed content in the title fields of resources, archival objects,
 ## digital objects, digital object components, and accessions
-#AppConfig[:allow_mixed_content_title_fields] = false
+AppConfig[:allow_mixed_content_title_fields] = true
 #
 ## This sets the allowed size of the request/response header that Jetty will accept (
 ## anything bigger gets a 403 error ). Note if you want to jack this size up,
@@ -357,52 +357,52 @@
 ## the public UI application.
 ## Note - any changes to record_inheritance config will require a reindex of pui
 ## records to take affect. To do this remove files from indexer_pui_state
-#AppConfig[:record_inheritance] = {
-#  :archival_object => {
-#    :inherited_fields => [
-#                          {
-#                            :property => 'title',
-#                            :inherit_directly => true
-#                          },
-#                          {
-#                            :property => 'component_id',
-#                            :inherit_directly => false
-#                          },
-#                          {
-#                            :property => 'lang_materials',
-#                            :inherit_directly => false
-#                          },
-#                          {
-#                            :property => 'dates',
-#                            :inherit_directly => true
-#                          },
-#                          {
-#                            :property => 'extents',
-#                            :inherit_directly => false
-#                          },
-#                          {
-#                            :property => 'linked_agents',
-#                            :inherit_if => proc {|json| json.select {|j| j['role'] == 'creator'} },
-#                            :inherit_directly => false
-#                          },
-#                          {
-#                            :property => 'notes',
-#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'accessrestrict'} },
-#                            :inherit_directly => true
-#                          },
-#                          {
-#                            :property => 'notes',
-#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'scopecontent'} },
-#                            :inherit_directly => false
-#                          },
-#                          {
-#                            :property => 'notes',
-#                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'langmaterial'} },
-#                            :inherit_directly => false
-#                          },
-#                         ]
-#  }
-#}
+AppConfig[:record_inheritance] = {
+  :archival_object => {
+    :inherited_fields => [
+                          {
+                            :property => 'title',
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'component_id',
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'lang_materials',
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'dates',
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'extents',
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'linked_agents',
+                            :inherit_if => proc {|json| json.select {|j| j['role'] == 'creator'} },
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'notes',
+                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'accessrestrict'} },
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'notes',
+                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'scopecontent'} },
+                            :inherit_directly => false
+                          },
+                          {
+                            :property => 'notes',
+                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'langmaterial'} },
+                            :inherit_directly => false
+                          },
+                         ]
+  }
+}
 #
 ## record types resolved for record inheritance
 #AppConfig[:record_inheritance_resolves] = [
@@ -416,10 +416,10 @@
 ## The values for :include_level and :identifier_delimiter shown here are the defaults
 ## If :include_level is set to true then level values (eg Series) will be included in _composite_identifier
 ## The :identifier_delimiter is used when joining the four part identifier for resources
-##AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
-##  :include_level => false,
-##  :identifier_delimiter => ' '
-##}
+AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
+  :include_level => true,
+  :identifier_delimiter => ' '
+}
 #
 ## To configure additional elements to be inherited use this pattern in your config
 ##AppConfig[:record_inheritance][:archival_object][:inherited_fields] <<
@@ -469,7 +469,7 @@
 ## PUI General Configurations
 ## TODO: Clean up configuration options
 #
-#AppConfig[:pui_search_results_page_size] = 10
+AppConfig[:pui_search_results_page_size] = 15
 #AppConfig[:pui_branding_img] = 'ArchivesSpaceLogo.svg'
 #AppConfig[:pui_branding_img_alt_text] = 'ArchivesSpace - a community served by Lyrasis.'
 #
@@ -488,10 +488,10 @@
 #
 ## The following determine which 'tabs' are on the main horizontal menu
 #AppConfig[:pui_hide] = {}
-#AppConfig[:pui_hide][:repositories] = false
+AppConfig[:pui_hide][:repositories] = true
 #AppConfig[:pui_hide][:resources] = false
 #AppConfig[:pui_hide][:digital_objects] = false
-#AppConfig[:pui_hide][:accessions] = false
+AppConfig[:pui_hide][:accessions] = true
 #AppConfig[:pui_hide][:subjects] = false
 #AppConfig[:pui_hide][:agents] = false
 #AppConfig[:pui_hide][:classifications] = false
@@ -501,7 +501,7 @@
 #AppConfig[:pui_hide][:resource_badge] = false
 #AppConfig[:pui_hide][:record_badge] = true # hide by default
 #AppConfig[:pui_hide][:digital_object_badge] = false
-#AppConfig[:pui_hide][:accession_badge] = false
+AppConfig[:pui_hide][:accession_badge] = true
 #AppConfig[:pui_hide][:subject_badge] = false
 #AppConfig[:pui_hide][:agent_badge] = false
 #AppConfig[:pui_hide][:classification_badge] = false
@@ -523,7 +523,7 @@
 #
 ## Enable / disable PUI resource/archival object page actions
 #AppConfig[:pui_page_actions_cite] = true
-#AppConfig[:pui_page_actions_request] = true
+AppConfig[:pui_page_actions_request] = false
 #AppConfig[:pui_page_actions_print] = true
 #
 ## Enable / disable search-in-collection form in sidebar when viewing records
