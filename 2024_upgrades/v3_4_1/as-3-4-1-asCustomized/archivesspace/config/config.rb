@@ -369,35 +369,12 @@ AppConfig[:record_inheritance] = {
                             :inherit_directly => false
                           },
                           {
-                            :property => 'lang_materials',
-                            :inherit_directly => false
-                          },
-                          {
                             :property => 'dates',
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'extents',
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'linked_agents',
-                            :inherit_if => proc {|json| json.select {|j| j['role'] == 'creator'} },
                             :inherit_directly => false
                           },
                           {
                             :property => 'notes',
                             :inherit_if => proc {|json| json.select {|j| j['type'] == 'accessrestrict'} },
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'notes',
-                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'scopecontent'} },
-                            :inherit_directly => false
-                          },
-                          {
-                            :property => 'notes',
-                            :inherit_if => proc {|json| json.select {|j| j['type'] == 'langmaterial'} },
                             :inherit_directly => false
                           },
                          ]
@@ -470,10 +447,10 @@ AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
 ## TODO: Clean up configuration options
 #
 AppConfig[:pui_search_results_page_size] = 15
-AppConfig[:pui_branding_img] = '/plugins/local/public/assets/images/UHML-logo.png'
+AppConfig[:pui_branding_img] = '/assets/images/UHML-logo.png'
 AppConfig[:pui_branding_img_alt_text] = 'UHM Hamilton Library logo'
 #
-AppConfig[:frontend_branding_img] = '/plugins/local/frontend/assets/images/UHML-logo.png'
+AppConfig[:frontend_branding_img] = '/assets/images/UHML-logo.png'
 AppConfig[:frontend_branding_img_alt_text] = 'UHM Hamilton Library logo'
 #
 #AppConfig[:pui_block_referrer] = true # patron privacy; blocks full 'referrer' when going outside the domain
