@@ -1,5 +1,12 @@
-<div class="col-sm-3 hidden-xs">
-    <a href="https://manoa.hawaii.edu/library/">
+<section id="header">
+  <div class="row">
+    <div class="col-sm-3 hidden-xs">
+      <a href="https://manoa.hawaii.edu/library/">
         <img class="logo" src="<%= asset_path(AppConfig[:pui_branding_img]) %>" alt="<%= AppConfig[:pui_branding_img_alt_text] %>" />
-    </a>
-</div>
+      </a>
+      <div class="col-sm-9 h1">
+        <% unless request.original_fullpath == '/' %> <a title="<%=t('brand.title_link_text') %>" href="<%= AppConfig[:public_proxy_url] %>"><% end %> <%= t('brand.title') %><% unless request.original_fullpath == '/' %> </a>        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
