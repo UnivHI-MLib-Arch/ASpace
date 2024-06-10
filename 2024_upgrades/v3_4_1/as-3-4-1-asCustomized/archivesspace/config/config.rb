@@ -76,17 +76,23 @@
 ## Another example below sets the boost query value (bq) to boost the relevancy for the query string in the title,
 ## sets the phrase fields parameter (pf) to boost the relevancy for the title when the query terms are in close proximity to
 ## each other, and sets the phrase slop (ps) parameter for the pf parameter to indicate how close the proximity should be
-##  AppConfig[:solr_params] = {
-##      "bq" => proc { "title:\"#{@query_string}\"*" },
-##      "pf" => 'title^10',
-##      "ps" => 0,
-##    }
+  AppConfig[:solr_params] = {
+      "bq" => proc { "title:\"#{@query_string}\"*" },
+      "pf" => 'title^10',
+      "ps" => 1,
+    }
 ## For more information about solr parameters, please consult the solr documentation
 ## here: https://lucene.apache.org/solr/
+#
 ## Configuring search operator to be AND by default - ANW-427
 #AppConfig[:solr_params] = { 'q.op' => 'AND' }
 #AppConfig[:solr_verify_checksums] = true
 #
+## Try to boost resource records in search results some without boosting unrelated collections too much
+AppConfig[:solr_params] = {
+  "bq" => proc { "primary_type:accession^1.3 OR primary_type:resource^1.2 OR primary_type:archival_object^1.1" },
+  "q.op" => "AND"
+}
 ## Set the application's language (see the .yml files in
 ## https://github.com/archivesspace/archivesspace/tree/master/common/locales for
 ## a list of available locale codes)
@@ -148,7 +154,7 @@ AppConfig[:default_page_size] = 15
 #AppConfig[:indexer_solr_timeout_seconds] = 300
 #
 ## PUI Indexer Settings
-AppConfig[:pui_indexer_enabled] = false
+#AppConfig[:pui_indexer_enabled] = true
 #AppConfig[:pui_indexing_frequency_seconds] = 30
 #AppConfig[:pui_indexer_records_per_thread] = 25
 #AppConfig[:pui_indexer_thread_count] = 1
@@ -274,7 +280,7 @@ AppConfig[:pui_indexer_enabled] = false
 AppConfig[:feedback_url] = ""
 #
 ## Allow an unauthenticated user to create an account
-#AppConfig[:allow_user_registration] = true
+AppConfig[:allow_user_registration] = false
 #
 ## Help Configuration
 #AppConfig[:help_enabled] = true
