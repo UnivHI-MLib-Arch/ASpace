@@ -21,15 +21,15 @@
 
 en:
   brand:
-    title: UH-Manoa Catalog for Archival Materials
-    title_link_text: Return to the archival catalog homepage
+    title: UH-Mānoa Catalog for Archival Materials
+    title_link_text: Return to the UHML archival catalog homepage
     home: Home
-    welcome_head: Welcome to ArchivesSpace at the University of Hawaii at Manoa Library!
+    welcome_head: Welcome to ArchivesSpace at the University of Hawaiʻi at Mānoa Library!
     welcome_message: |
                      <p>This system allows you to search for archival material from departments across the library, including the <a href="http://manoa.hawaii.edu/library/research/collections/charlot-collection/">Jean Charlot Collection</a>, the <a href="https://guides.library.manoa.hawaii.edu/hawaiianpacific">Hawaiian and Pacific Collections</a>, and the <a href="http://manoa.hawaii.edu/library/research/collections/archives/">University Archives and Manuscripts</a>.  Visit the departmental pages for general overviews of each department's collections, as well as for information about how to visit and conduct research with these materials. </p>
                      <p>Note that the ArchivesSpace database primarily contains records describing our special collections and archival materials; most other items held by our departments may be found via <a href="https://uhawaii-manoa.primo.exlibrisgroup.com/discovery/search?tab=Everything&vid=01UHAWAII_MANOA:MANOA&lang=en&offset=0&mode=advanced">OneSearch</a>.</p>
-                     <p>To Browse: 1) Click on one of the five options in the navigation bar above.  2) Either page through the results or sort and filter them with the tools that appear on the right side of the screen.</p>
-                     <p>To Search: 1) Enter relevant terms into the boxes below. 2) Sort and/or filter results as directed above.</p>
+                     <p>To Browse:</p><p><ol><li> Click on one of the five options in the navigation bar above</li><li>Either page through the results or sort and filter them with the tools that appear on the right side of the screen</li></ol></p>
+                     <p>To Search:</p><p><ol><li> Enter relevant terms into the boxes below</li><li> Sort and/or filter results as directed above.</li></ol></p>
 
 
     welcome_search_label: "Find what you're looking for:"
