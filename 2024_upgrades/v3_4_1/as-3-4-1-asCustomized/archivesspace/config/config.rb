@@ -76,11 +76,11 @@
 ## Another example below sets the boost query value (bq) to boost the relevancy for the query string in the title,
 ## sets the phrase fields parameter (pf) to boost the relevancy for the title when the query terms are in close proximity to
 ## each other, and sets the phrase slop (ps) parameter for the pf parameter to indicate how close the proximity should be
-  AppConfig[:solr_params] = {
-      "bq" => proc { "title:\"#{@query_string}\"*" },
-      "pf" => 'title^5',
-      "ps" => 1,
-    }
+AppConfig[:solr_params] = {
+  "bq" => proc { "title:\"#{@query_string}\"*" },
+  "pf" => 'title^4',
+  "ps" => 1,
+}
 ## For more information about solr parameters, please consult the solr documentation
 ## here: https://lucene.apache.org/solr/
 #
@@ -90,7 +90,7 @@
 #
 ## Try to boost resource records in search results some without boosting unrelated collections too much
 AppConfig[:solr_params] = {
-  "bq" => proc { "primary_type:accession^1.2 OR primary_type:resource^1.3 OR primary_type:archival_object^1.1" },
+  "bq" => proc { "primary_type:accession^2 OR primary_type:resource^3 OR primary_type:archival_object^1.1" },
   "q.op" => "AND"
 }
 ## Set the application's language (see the .yml files in
