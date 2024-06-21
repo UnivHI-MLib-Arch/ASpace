@@ -90,7 +90,7 @@ AppConfig[:solr_params] = {
 #
 ## Try to boost resource records in search results some without boosting unrelated collections too much
 AppConfig[:solr_params] = {
-  "bq" => proc { "primary_type:accession^2 OR primary_type:resource^3 OR primary_type:archival_object^1.1" },
+  "bq" => proc { "primary_type:accession^1.2 OR primary_type:resource^1.7 OR primary_type:archival_object^1.1" },
   "q.op" => "AND"
 }
 ## Set the application's language (see the .yml files in
