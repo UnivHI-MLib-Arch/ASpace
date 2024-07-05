@@ -78,7 +78,7 @@
 ## each other, and sets the phrase slop (ps) parameter for the pf parameter to indicate how close the proximity should be
 AppConfig[:solr_params] = {
   "bq" => proc { "title:\"#{@query_string}\"*" },
-  "pf" => 'title^4',
+  "pf" => 'title^2.3',
   "ps" => 1,
 }
 ## For more information about solr parameters, please consult the solr documentation
@@ -90,7 +90,7 @@ AppConfig[:solr_params] = {
 #
 ## Try to boost resource records in search results some without boosting unrelated collections too much
 AppConfig[:solr_params] = {
-  "bq" => proc { "primary_type:accession^1.2 OR primary_type:resource^1.7 OR primary_type:archival_object^1.1" },
+  "bq" => proc { "primary_type:accession^2.4 OR primary_type:resource^5.9 OR primary_type:archival_object^1.1" },
   "q.op" => "AND"
 }
 ## Set the application's language (see the .yml files in
