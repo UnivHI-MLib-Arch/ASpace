@@ -9,11 +9,6 @@
 
 It should be noted, however, that this repo does NOT include customized changes / defaults that are set in the SUI itself.  For a record of those changes, see the [ASpace-Docs](https://github.com/UnivHI-MLib-Arch/ASpace-Docs/) repo.  (TO DO: make sure the staff manual's 'release notes' section includes this information.)
 
-## Known issues as of 2024.06.21
+## Known issues
 
-- PUI Logo: link to UHML homepage not working
-  - Fix postponed to next upgrade.
-- PUI logo: displays on wrong side of the page (should be at top left, not top right)
-  - Fix postponed to next upgrade.
-- PUI (and maybe SUI) search results: It is uncertain whether or not solr parameter changes in the config.rb file are affecting the SUI search results properly--and more problematically, the PUI search results at all--because the Solr indexer doesn't appear to capture everything in the backend database.
-  - Still being investigated.
+- See the '[Present Status](https://github.com/UnivHI-MLib-Arch/ASpace-Docs/blob/main/Upgrade_History/PresentStatus.md)' page of the ASpace-Docs repository for the current list of known issues.
