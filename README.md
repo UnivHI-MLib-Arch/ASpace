@@ -10,6 +10,6 @@ Notes:
 
 * Note: Various additional config file changes (to improve PUI search results) were implemented in June 2021; these are not separately reflected in their own update folder, but are instead subsumed in the config file for the first of the 2024 updates (i.e. "2024_upgrades/v2_7_1/").
 
-* "2024_upgrades" folder: As of June 2024, still a work in progress.
+* "2024_upgrades" folder: Document two upgrades performed in the summer of 2024, first an upgrade from 2.5.1 to 2.7.1, and then one from 2.7.1 to 3.4.1. See the readme files for each upgrade's subfolder for more details.
 
 For more complete documentation of UHML's use of ArchivesSpace see the [ASpace-Docs](https://github.com/UnivHI-MLib-Arch/ASpace-Docs/) repo.
